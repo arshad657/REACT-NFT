@@ -3,8 +3,8 @@ import './Main.css'
 import {useState, useEffect } from 'react'
 
 function Main(punkList) {
-    // console.log(punkList.punkList)
-    // const [activePunk, setActivePunk] = useState(punkList.punkList[0])
+    console.log(punkList.punkList)
+    const [activePunk, setActivePunk] = useState(punkList.punkList[0])
     
 
     useEffect(() => {
@@ -15,7 +15,7 @@ function Main(punkList) {
         <div className='mainContent'>
             <div className='punkHighlight'>
                 <div className='punkContainer'>
-                    <img src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png' alt="" className='selectedPunk'/>
+                    <img src={activePunk.image_url} alt="" className='selectedPunk'/>
                 </div>
             </div>
 

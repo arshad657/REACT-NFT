@@ -30,7 +30,7 @@ function App() {
     <div className="App">
 
       <Header />
-      <Main />
+      <Main punkList={punkList}/>
       <PunkList listData={punkList} />
       
         {/* <div className="collections">  */}
