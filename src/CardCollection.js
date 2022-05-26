@@ -1,9 +1,15 @@
 import React from 'react'
 import './CardCollection.css'
+import {useState} from 'react'
 
 function CardCollection(punk) {
     
     const {id, name, traits, img} = punk;
+
+    // const handleClick= (name, id) => {
+    //   setSelectedPunk(name)
+    //   console.log(selectedPunk)
+    // }
     
   return (
       

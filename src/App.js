@@ -9,7 +9,14 @@ import Main from './Main';
 
 function App() {
   const [punkList, setPunkList] = useState([])
+  
+    const [selectedPunk, setSelectedPunk] =useState('')
 
+  const handleClick = (nam) => {
+    console.log('clicked')
+    setSelectedPunk(nam)
+    console.log(selectedPunk.name)
+  }
   
 
   useEffect(() => {
@@ -31,7 +38,7 @@ function App() {
 
       <Header />
       <Main punkList={punkList}/>
-      <PunkList listData={punkList} />
+      <PunkList listData={punkList} event={nam => handleClick(nam)}/>
       
         {/* <div className="collections">  */}
          {/* punkList.map(punk => 

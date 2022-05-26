@@ -1,25 +1,35 @@
 import React from 'react'
 import CardCollection from './CardCollection';
 import './PunkList.css'
+import {useState} from 'react'
 
 function PunkList(punkData) {
   const punkDataList = punkData.listData;
-  console.log(punkDataList)
+
+  // const [selectedPunk, setSelectedPunk] = useState()
   
-  // const handleClick =() => {
-  //   console.log("its being clicked")
+  // console.log(punkDataList)
+  // const handleClick= (punk) => {
+  // console.log('its clicked')
   // }
+  // const func =  ;
+  // // console.log(func)
+  
+  
   return (
-    <div className='lists'>
+    <div className='lists' >
         {punkDataList.map(punk =>
         
-        <div>
+        <div onClick={()=> punkData.event(punk)}>
         <CardCollection 
-            key ={punk.image_url}
-            id={punk.id} 
+            key={punk.id}
+            id={punk.token_id} 
             traits={punk.traits}  
             name={punk.name} 
-            img={punk.image_url} />
+            img={punk.image_url} 
+            
+            
+            />
             </div>
             ) }
     </div>

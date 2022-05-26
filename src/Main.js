@@ -3,27 +3,52 @@ import './Main.css'
 import {useState, useEffect } from 'react'
 
 function Main(punkList) {
-    console.log(punkList.punkList)
-    const [activePunk, setActivePunk] = useState(punkList.punkList[0])
+    // console.log(punkList.punkList)
+    const [activePunk, setActivePunk] = useState([])
+    // const dataList = punkList.punkList;
+
+
+    // const data = punkList.punkList[0];
+            
+    //     if(activePunk){
+    //           console.log(activePunk)
+    // console.log(punkList.punkList.length)
+
+    //     }
+
+    
+    // console.log(data)
+    
     
 
-    useEffect(() => {
+    // useEffect(() => {
+    // setActivePunk(punkList.punkList[0])
+    // },[activePunk])
+    // console.log(activePunk)
+
     
-    },[])
+
   return (
+    
     <div className='main'>
-        <div className='mainContent'>
+        { activePunk 
+        ? <div>
+            <h1 className='white'>I am kashfi</h1>
+            
+
+
+            <div className='mainContent'>
             <div className='punkHighlight'>
                 <div className='punkContainer'>
                     <img src={activePunk.image_url} alt="" className='selectedPunk'/>
                 </div>
             </div>
-
+        
             <div className='info'>
 
             <div className='punkDetails' style={{color: "#fff"}}>
-            <div className='title'>Bandana Punk</div>
-            <span className='itemNumber'>.#3</span>
+            <div className='title'>{activePunk.name}</div>
+            <span className='itemNumber'> #.{activePunk.token_id}</span>
             </div>
 
 
@@ -55,6 +80,16 @@ function Main(punkList) {
 
 
             </div>
+
+            </div> 
+
+    :   <div>
+        <h2>No datas</h2>
+        </div>}
+
+        
+        
+        
         
 
             
