@@ -1,6 +1,11 @@
 .App {
-  text-align: center;
+  background-color: black;
+  padding: 20px;
+  min-height: 100vh;
+  /* min-width: 100vw; */
+  color: white;
 }
+
 
 .App-logo {
   height: 40vmin;
