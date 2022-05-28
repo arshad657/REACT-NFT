@@ -7,7 +7,7 @@ function Main(punkList) {
     const [activePunk, setActivePunk] = useState()
     const selectedPunk = punkList.selectedPunk;
     
-
+    console.log(selectedPunk)
     useEffect(() => {
         setActivePunk(selectedPunk)
       }, [selectedPunk])
@@ -63,12 +63,12 @@ function Main(punkList) {
 
             <div className="owner">
             <div className="ownerImageContainer">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="" />
+                <img src={selectedPunk.creator.profile_img_url} alt="" />
             </div>
             <div className="ownerDetails">
                 <div className="ownerNameAndHandle">
-                    <div>0x313235fver62frr8552frf265525485fer</div>
-                    <div className="ownerHandle">@cleverprogrammer</div>
+                    <div>{selectedPunk.creator.address}</div>
+                    <div className="ownerHandle">@ahmedarshad8565</div>
                 </div>
                 <div className='medias'>
                 <div >
@@ -110,12 +110,12 @@ function Main(punkList) {
 
     <div className="owner">
     <div className="ownerImageContainer">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png" alt="" />
+        <img src="https://storage.googleapis.com/opensea-static/opensea-profile/32.png" alt="" />
     </div>
     <div className="ownerDetails">
         <div className="ownerNameAndHandle">
-            <div>0x313235fver62frr8552frf265525485fer</div>
-            <div className="ownerHandle">@cleverprogrammer</div>
+            <div>0x835c77298fe580df7c59582fd4c3967c6bd3bca2</div>
+            <div className="ownerHandle">@ahmedarshad8565</div>
         </div>
         <div className='medias'>
         <div >
