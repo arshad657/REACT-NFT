@@ -9,14 +9,28 @@ import Main from './Main';
 
 function App() {
   const [punkList, setPunkList] = useState([])
-  
-    const [selectedPunk, setSelectedPunk] =useState('')
+  // console.log(punkList[0])
+  const [selectedPunk, setSelectedPunk] =useState(punkList[0])
+  // console.log(selectedPunk)
 
-  const handleClick = (nam) => {
-    console.log('clicked')
-    setSelectedPunk(nam)
-    console.log(selectedPunk.name)
-  }
+    const handleClick = (nam) => {
+      // console.log('clicked')
+      setSelectedPunk(nam)
+      // console.log(nam.name)
+    }
+    if(selectedPunk){
+      // console.log(selectedPunk)
+      
+    }
+    // else{
+    //   setSelectedPunk(punkList[0])
+    //   console.log(selectedPunk.name)
+      
+    // }
+    // console.log(selectedPunk.name)
+  // useEffect((nam)=> {
+  //   setSelectedPunk(nam)
+  // },[selectedPunk])
   
 
   useEffect(() => {
@@ -28,7 +42,7 @@ function App() {
     setPunkList(openseaData.data.assets)
     
     }
-    console.log(punkList)
+    // console.log(punkList)
     
     return getNFT()
   }, [])
@@ -37,20 +51,10 @@ function App() {
     <div className="App">
 
       <Header />
-      <Main punkList={punkList}/>
+      <Main punkList={punkList} selectedPunk={selectedPunk}/>
       <PunkList listData={punkList} event={nam => handleClick(nam)}/>
       
-        {/* <div className="collections">  */}
-         {/* punkList.map(punk => 
-        // <CardCollection 
-        //     key ={punk.image_url}
-        //     id={punk.id} 
-        //     traits={punk.traits}  
-        //     name={punk.name} 
-        //     img={punk.image_url} />) 
-         */}
-         
-        {/* </div> */}
+        
         
       
 
