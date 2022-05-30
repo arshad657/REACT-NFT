@@ -7,7 +7,7 @@ function Main(punkList) {
     const [activePunk, setActivePunk] = useState()
     const selectedPunk = punkList.selectedPunk;
     
-    console.log(selectedPunk)
+    // console.log(selectedPunk)
     useEffect(() => {
         setActivePunk(selectedPunk)
       }, [selectedPunk])

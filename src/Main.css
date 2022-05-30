@@ -33,9 +33,11 @@
 
 }
 .selectedPunk{
-    object-fit: contain;
-    max-width: min(30vw, 40vh);
-    max-height: 30vw;
+    /* object-fit: contain; */
+    /* max-width: min(30vw, 40vh);
+    max-height: 30vw; */
+    height: 350px;
+    width: 400px;
 }
 .punkDetails{
     display: flex;
