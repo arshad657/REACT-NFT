@@ -2,35 +2,20 @@ import './App.css';
 import Header from './Header/Header';
 import {useState, useEffect } from 'react'
 import axios from 'axios';
-// import CardCollection from './CardCollection';
 import PunkList from './PunkList';
 import Main from './Main';
 
 
 function App() {
   const [punkList, setPunkList] = useState([])
-  // console.log(punkList[0])
+  
   const [selectedPunk, setSelectedPunk] =useState(punkList[0])
-  // console.log(selectedPunk)
 
     const handleClick = (nam) => {
-      // console.log('clicked')
+
       setSelectedPunk(nam)
-      // console.log(nam.name)
+  
     }
-    if(selectedPunk){
-      // console.log(selectedPunk)
-      
-    }
-    // else{
-    //   setSelectedPunk(punkList[0])
-    //   console.log(selectedPunk.name)
-      
-    // }
-    // console.log(selectedPunk.name)
-  // useEffect((nam)=> {
-  //   setSelectedPunk(nam)
-  // },[selectedPunk])
   
 
   useEffect(() => {
@@ -42,7 +27,6 @@ function App() {
     setPunkList(openseaData.data.assets)
     
     }
-    // console.log(punkList)
     
     return getNFT()
   }, [])
@@ -54,10 +38,6 @@ function App() {
       <Main punkList={punkList} selectedPunk={selectedPunk}/>
       <PunkList listData={punkList} event={nam => handleClick(nam)}/>
       
-        
-        
-      
-
     </div>
   );
 }

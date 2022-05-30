@@ -3,41 +3,13 @@ import './Main.css'
 import {useState, useEffect } from 'react'
 
 function Main(punkList) {
-    // console.log(punkList.punkList)
+
     const [activePunk, setActivePunk] = useState()
     const selectedPunk = punkList.selectedPunk;
     
-    // console.log(selectedPunk)
     useEffect(() => {
         setActivePunk(selectedPunk)
       }, [selectedPunk])
-    //   console.log(activePunk)
-    
-    // console.log(selectedPunk)
-//     {!activePunk 
-//     ? setActivePunk(punkList.punkList[0])
-//     : setActivePunk(selectedPunk)
-// }
-//     console.log(activePunk)
-
-    // const data = punkList.punkList[0];
-            
-    //     if(activePunk){
-    //           console.log(activePunk)
-    // console.log(punkList.punkList.length)
-
-    //     }
-
-    
-    // console.log(data)
-    
-    
-
-    // useEffect(() => {
-    // setActivePunk(punkList.punkList[0])
-    // },[activePunk])
-    // console.log(activePunk)
-
     
 
   return (

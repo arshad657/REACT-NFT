@@ -33,16 +33,11 @@
 
 }
 .selectedPunk{
-    /* object-fit: contain; */
-    /* max-width: min(30vw, 40vh);
-    max-height: 30vw; */
     height: 350px;
     width: 400px;
 }
 .punkDetails{
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-between; */
     align-items: center;
     flex: 0.75;
 }
@@ -73,9 +68,7 @@
     
 }
 .medias{
-    /* margin-left: 500px; */
     display: flex;
-    /* justify-content: space-between; */
 
 }
 .ownerImageContainer > img{
