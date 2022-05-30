@@ -21,7 +21,7 @@ function App() {
   useEffect(() => {
     const getNFT = async () => {
       const openseaData = await axios.get(
-        'https://testnets-api.opensea.io/assets?asset_contract_address=0x5F840e2582cBc5e08324aAb90B62CcEe9a1c22e1&order_direction=asc'
+        'https://cors-anywhere.herokuapp.com/https://testnets-api.opensea.io/assets?asset_contract_address=0x5F840e2582cBc5e08324aAb90B62CcEe9a1c22e1&order_direction=asc'
       )
       
     setPunkList(openseaData.data.assets)
